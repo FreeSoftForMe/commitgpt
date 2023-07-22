@@ -1,0 +1,11 @@
+{
+    "OPENAI_API_KEY": "YOUR_TOKEN_KEY",
+    "TASK_PREFIX": "YOUR_TASK_PREFIX",
+    "MODEL_NAME": "gpt-3.5-turbo",
+    "OPENAI_API_URL": "https://api.openai.com/v1/chat/completions",
+    "TEMPERATURE": 0.0,
+    "MAX_TOKEN_COUNT": 700,
+    "GIT_COMMAND": ["git", "diff", "-U5", "--cached", "--function-context"],
+    "MESSAGE_TEMPLATE": "I have made the following changes using the command '{git_command}': \n{diff}\n\nIn the diff output, lines starting with '+' are added lines, lines starting with '-' are removed lines, and all other lines are context. \n\nCan you suggest 6 commit messages based on the above diff? The commit messages should follow conventional commits, and the message format should be: <Type>: <description>. "
+
+}
